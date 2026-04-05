@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I Want To Be... | Life Advice, Taken Literally</title>
+    <meta
+      name="description"
+      content="Tell us what you want to be. We'll find the shortcut. Technically correct advice, guaranteed results."
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="I Want To Be... | Life Advice, Taken Literally"
+    />
+    <meta
+      property="og:description"
+      content="Tell us your dream. We'll find the shortcut. Technically correct advice, guaranteed results."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="I Want To Be..." />
+    <meta
+      name="twitter:description"
+      content="Tell us your dream. We'll find the shortcut."
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="confetti"></canvas>
+
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <p class="eyebrow">Life Advice, Taken Literally</p>
+        <h1>I WANT<br />TO <span class="highlight">BE...</span></h1>
+        <p class="subtitle">// tell us your dream. we'll find the shortcut.</p>
+      </header>
+
+      <!-- Input -->
+      <div class="input-area">
+        <div class="prefix">I WANT TO BE</div>
+        <input
+          id="wish-input"
+          type="text"
+          placeholder="a millionaire, a rockstar, famous..."
+          maxlength="80"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="ask-btn" class="btn-go">GO</button>
+      </div>
+
+      <!-- Quick picks -->
+      <div class="suggestions">
+        <button class="chip" data-wish="rich">rich</button>
+        <button class="chip" data-wish="famous">famous</button>
+        <button class="chip" data-wish="a genius">a genius</button>
+        <button class="chip" data-wish="an astronaut">an astronaut</button>
+        <button class="chip" data-wish="a ninja">a ninja</button>
+        <button class="chip" data-wish="Elon Musk">Elon Musk</button>
+        <button class="chip" data-wish="happy">happy</button>
+        <button class="chip" data-wish="a wizard">a wizard</button>
+        <button class="chip" data-wish="a cat">a cat</button>
+        <button class="chip" data-wish="left alone">left alone</button>
+      </div>
+
+      <!-- Answer Box -->
+      <div id="answer-box" class="answer-box">
+        <div class="stamp">100%<br />LEGIT<br />ADVICE</div>
+        <p class="placeholder-text" id="placeholder">
+          Your life-changing answer will appear here.
+        </p>
+        <p class="answer-label" id="answer-label">Your solution:</p>
+        <p class="answer-text" id="answer-text"></p>
+        <span class="category-tag" id="category-tag"></span>
+      </div>
+
+      <!-- Actions (hidden until answer) -->
+      <div class="actions" id="actions">
+        <button id="again-btn" class="btn-action">ANOTHER ONE</button>
+        <button id="copy-btn" class="btn-action">COPY</button>
+        <button id="share-btn" class="btn-action">SHARE</button>
+      </div>
+
+      <!-- History -->
+      <div id="history-section" class="history" style="display: none">
+        <div class="history-title">Previous Wisdom</div>
+        <div id="history-list"></div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>
+          Disclaimer: We are not responsible for any accidental
+          self-improvement.
+        </p>
+        <p>
+          Built for the
+          <a
+            href="https://dev.to/challenges/aprilfools-2026"
+            target="_blank"
+            rel="noopener"
+            >Dev.to April Fools Challenge</a
+          >
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
